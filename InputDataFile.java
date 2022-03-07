@@ -6,7 +6,7 @@ import java.io.*;
  *  InputDataFile is a class that represents an input datafile.
  *
  *  @author Cathy Bishop
- *  Andrew ID: snwanyim and aorioke
+ *  Andrew ID: snwanyim 
  *  On my honor, as a Carnegie-Mellon Africa student, I have neither given nor received unauthorized assistance on this work.
  */
 
