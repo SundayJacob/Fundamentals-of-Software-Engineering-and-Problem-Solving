@@ -1,5 +1,5 @@
 /**
- * This program is a RectanglePG program.
+ * This program is a RectanglePG program. 
  *
  * @author Sunday Jacob Nwanyim 
  *
@@ -24,10 +24,10 @@ public RectanglePG()
 public void paint(Graphics g)
 { 
       super.paint(g);
-      g.drawRect(boundingRectangle.getTopLeft().x, boundingRectangle.getTopLeft().y, boundingRectangle.getWidth(), boundingRectangle.getHeight());
+      g.drawRect(getTopLeft().x, getTopLeft().y, boundingRectangle.width, boundingRectangle.height);
       g.setColor(getColor());
       
-      g.fillRect(boundingRectangle.getTopLeft().x, boundingRectangle.getTopLeft().y, boundingRectangle.getWidth(), boundingRectangle.getHeight());
+      g.fillRect(getTopLeft().x, getTopLeft().y, boundingRectangle.width, boundingRectangle.height);
     
 }
 

@@ -1,5 +1,5 @@
 /**
- * This program is a TestTrianglePG program.
+ * This program is a TestTrianglePG program. 
  *
  * @author Sunday Jacob Nwanyim 
  *
@@ -44,6 +44,8 @@ public static void main(String[] args) throws IOException
 
     TrianglePG shape = new TrianglePG();
     shape.setShape(TrianglePG.TriangleShape.DOWN);
+    shape.setCenter(new Point(centerX, centerY));
+    shape.getTopLeft();
    
 
 
@@ -66,10 +68,9 @@ public static void main(String[] args) throws IOException
 
     // ---------- You write the code here:
     
-    shape.boundingRectangle.setWidth(200);
-    shape.boundingRectangle.setHeight(200);
+    
 
-    shape.setboundingRectangle(p, 200, 200);
+    shape.setBoundingRectangle(p, 200, 200);
     shape.setColor(Color.black);
     shape.setDebug(false);
 
@@ -113,7 +114,7 @@ public static void main(String[] args) throws IOException
         color = ColorConverter.getColor(str);
         shape.setColor(Color.red);
         
-        shape.setboundingRectangle(p, width, height);
+        shape.setBoundingRectangle(p, width, height);
         shape.setColor(color);
         shape.repaint();
         

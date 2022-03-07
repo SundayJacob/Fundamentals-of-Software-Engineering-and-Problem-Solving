@@ -1,5 +1,5 @@
 /**
- * This program is a HalfCirlPG program.
+ * This program is a HalfCirlPG program. 
  *
  * @author Sunday Jacob Nwanyim 
  *
@@ -40,10 +40,10 @@ public void paint(Graphics g)
     
     
     
-    g.drawArc(super.boundingRectangle.getTopLeft().x, super.boundingRectangle.getTopLeft().y, super.boundingRectangle.getWidth(), super.boundingRectangle.getHeight()*2, startAngle, angleExtent);
+    g.drawArc(super.getTopLeft().x, super.getTopLeft().y, super.boundingRectangle.width, super.boundingRectangle.height*2, startAngle, angleExtent);
     g.setColor(getColor());
     
-    g.fillArc(super.boundingRectangle.getTopLeft().x, super.boundingRectangle.getTopLeft().y, super.boundingRectangle.getWidth(), super.boundingRectangle.getHeight()*2, startAngle, angleExtent);
+    g.fillArc(super.getTopLeft().x, super.getTopLeft().y, super.boundingRectangle.width, super.boundingRectangle.height*2, startAngle, angleExtent);
  }
       
 

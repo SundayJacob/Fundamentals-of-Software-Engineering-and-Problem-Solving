@@ -1,5 +1,5 @@
 /**
- * This program is a TestIceCreamPG program.
+ * This program is a TestIceCreamPG program. 
  *
  * @author Sunday Jacob Nwanyim 
  *
@@ -36,18 +36,22 @@ public static void main(String[] args) throws IOException
     //height = 100;
     Color color;
     color = Color.black;
-    Point p = new Point(centerX, centerY);
+    //Point p = new Point(centerX, centerY);
 
     // Create your shape and call the constructor. Call your variable shape.
     // ---------- You write the code here:
     
-    
-    
 
     IceCreamConePG shape = new IceCreamConePG();
-    shape.addScoop("black");
-   shape.addScoop("yellow");
-   //shape.addScoop("blue");
+    shape.setCenter(new Point(centerX, centerY));
+    shape.getTopLeft();
+    
+   shape.addScoop("black");
+   //shape.addScoop("yellow");
+//   shape.addScoop("blue");
+//   shape.addScoop("black");
+//   shape.addScoop("yellow");
+
 
 
 
@@ -72,7 +76,9 @@ public static void main(String[] args) throws IOException
     shape.setDebug(true);
     //shape.boundingRectangle.setWidth(200);
     //shape.boundingRectangle.setHeight(200);
-    shape.setboundingRectangle(p, 200, 100);
+    //shape.setBoundingRectangle(p, 200, 200);
+    shape.setBoundingR(centerX,centerY, 200, 200);
+
     shape.setColor(color);
 
     /*
@@ -101,7 +107,7 @@ public static void main(String[] args) throws IOException
         center = str.split("[,]");
         centerX = Integer.parseInt(center[0]);
         centerY = Integer.parseInt(center[1]);
-        p = new Point(centerX, centerY);
+        //p = new Point(centerX, centerY);
 
         System.out.print("Please Enter Width  and Height : [eg. 10,10] ");
         str = keyboard.readLine();
@@ -116,7 +122,9 @@ public static void main(String[] args) throws IOException
         color = ColorConverter.getColor(str);
         shape.setColor(Color.red);
         
-        shape.setboundingRectangle(p, width, height);
+        //shape.setBoundingRectangle(p, width, height);
+        shape.setBoundingR(centerX,centerY, width, height);
+
         shape.setColor(color);
         shape.repaint();
         

@@ -1,5 +1,5 @@
 /**
- * This program is a TestRectanglePG program.
+ * This program is a TestRectanglePG program. 
  *
  * @author Sunday Jacob Nwanyim 
  *
@@ -43,6 +43,8 @@ public static void main(String[] args) throws IOException
     
 
     RectanglePG shape = new RectanglePG();
+    shape.setCenter(new Point(centerX, centerY));
+    shape.getTopLeft();
    
 
 
@@ -64,9 +66,11 @@ public static void main(String[] args) throws IOException
      */
 
     // ---------- You write the code here:
+        
+    shape.setBoundingRectangle(p, 200, 200);
+    shape.setColor(Color.black);
     shape.setDebug(true);
-    shape.setboundingRectangle(p, width, height);
-    shape.setColor(color);
+
 
     /*
      * Prompt the user for the attributes, starting with the x and y coordinates of the center.
@@ -81,6 +85,50 @@ public static void main(String[] args) throws IOException
     // ---------- You write the code here:
 
     // This is printed when the user exits your input loop.
+    
+    BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
+    String str;
+    System.out.print("Please Enter Center X and Center Y: [eg. 10,10] ");
+    str = keyboard.readLine();
+    //int center;
+    String [] center = new String[2];
+    String [] dimension = new String[2];
+    while(!str.equals(""))
+    {
+        center = str.split("[,]");
+        centerX = Integer.parseInt(center[0]);
+        centerY = Integer.parseInt(center[1]);
+        p = new Point(centerX, centerY);
+
+        System.out.print("Please Enter Width  and Height : [eg. 10,10] ");
+        str = keyboard.readLine();
+        dimension = str.split("[,]");
+        width = Integer.parseInt(dimension[0]);
+        height = Integer.parseInt(dimension[1]);
+        //shape.getboundingRectangle().setTopLeft(p);
+        
+
+        System.out.print(" Please enter color ");
+        str = keyboard.readLine();
+        color = ColorConverter.getColor(str);
+        shape.setColor(Color.red);
+        
+        shape.setBoundingRectangle(p, width, height);
+        shape.setColor(color);
+        shape.repaint();
+        
+        System.out.print("Please Enter Center X and Center Y: [eg. 10,10] ");
+        str = keyboard.readLine();
+        
+        
+        
+        
+    }
+    System.out.println("Please enter a valid center. e.g 10,10");
+ 
+
+    
+    
     System.out.println("Finished testing. Close the window when finished.");
 }
 

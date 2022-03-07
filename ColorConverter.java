@@ -1,5 +1,5 @@
 /**
- * This program is a ColorConverter program.
+ * This program is a ColorConverter program. 
  *
  * @author Sunday Jacob Nwanyim 
  *

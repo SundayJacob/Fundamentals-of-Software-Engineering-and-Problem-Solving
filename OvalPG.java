@@ -1,5 +1,5 @@
 /**
- * This program is a OvalPG program.
+ * This program is a OvalPG program. 
  *
  * @author Sunday Jacob Nwanyim 
  *
@@ -32,9 +32,9 @@ public void paint(Graphics g)
 {
     super.paint(g);
     
-    g.drawOval(super.boundingRectangle.getTopLeft().x, super.boundingRectangle.getTopLeft().y, super.boundingRectangle.getWidth(), super.boundingRectangle.getHeight());
+    g.drawOval(super.getTopLeft().x, super.getTopLeft().y, super.boundingRectangle.width, super.boundingRectangle.height);
     g.setColor(getColor());
-    g.fillOval(super.boundingRectangle.getTopLeft().x, super.boundingRectangle.getTopLeft().y, super.boundingRectangle.getWidth(), super.boundingRectangle.getHeight());
+    g.fillOval(super.getTopLeft().x, super.getTopLeft().y, super.boundingRectangle.width, super.boundingRectangle.height);
         
  }
       //TestOvalPG

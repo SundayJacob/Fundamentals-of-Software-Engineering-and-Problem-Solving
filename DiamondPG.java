@@ -43,10 +43,10 @@ public void paint(Graphics g)
   
    {    
         
-       int x[] = {super.boundingRectangle.getTopMiddle().x, super.boundingRectangle.getMiddleLeft().x, super.boundingRectangle.getBottomMiddle().x, super.boundingRectangle.getMiddleRight().x};
+       int x[] = {super.getTopMiddle().x, super.getMiddleLeft().x, super.getBottomMiddle().x, super.getMiddleRight().x};
        
        //store all y points in an array for accessing
-       int y[] = {super.boundingRectangle.getTopMiddle().y, super.boundingRectangle.getMiddleLeft().y, super.boundingRectangle.getBottomMiddle().y, super.boundingRectangle.getMiddleRight().y};
+       int y[] = {super.getTopMiddle().y, super.getMiddleLeft().y, super.getBottomMiddle().y, super.getMiddleRight().y};
        
        
        g.drawPolygon(x, y, 4);

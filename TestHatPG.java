@@ -1,5 +1,5 @@
 /**
- * This program is a TestHatPG program.
+1q * This program is a TestHatPG program. 
  *
  * @author Sunday Jacob Nwanyim 
  *
@@ -36,13 +36,15 @@ public static void main(String[] args) throws IOException
     height = 100;
     Color color;
     color = Color.black;
-    Point p = new Point(centerX, centerY);
+   // Point p = new Point(centerX, centerY);
 
     // Create your shape and call the constructor. Call your variable shape.
     // ---------- You write the code here:
     
 
     HatPG shape = new HatPG();
+    shape.setCenter(new Point(centerX, centerY));
+    shape.getTopLeft();
    
 
 
@@ -64,10 +66,9 @@ public static void main(String[] args) throws IOException
      */
 
     // ---------- You write the code here:
+    
     shape.setDebug(false);
-    shape.boundingRectangle.setWidth(200);
-    shape.boundingRectangle.setHeight(200);
-    shape.setboundingRectangle(p, 200, 200);
+    shape.setBoundingR(centerX,centerY, 200, 200);
     shape.setColor(Color.black);
 
     /*
@@ -96,7 +97,7 @@ public static void main(String[] args) throws IOException
         center = str.split("[,]");
         centerX = Integer.parseInt(center[0]);
         centerY = Integer.parseInt(center[1]);
-        p = new Point(centerX, centerY);
+        //p = new Point(centerX, centerY);
 
         System.out.print("Please Enter Width  and Height : [eg. 10,10] ");
         str = keyboard.readLine();
@@ -111,7 +112,7 @@ public static void main(String[] args) throws IOException
         color = ColorConverter.getColor(str);
         shape.setColor(Color.red);
         
-        shape.setboundingRectangle(p, width, height);
+        shape.setBoundingR(centerX,centerY, width, height);
         shape.setColor(color);
         shape.repaint();
         

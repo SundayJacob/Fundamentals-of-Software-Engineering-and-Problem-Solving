@@ -1,5 +1,5 @@
 /**
- * This program is a TestDiamondPG program.
+ * This program is a TestDiamondPG program. 
  *
  * @author Sunday Jacob Nwanyim 
  *
@@ -43,6 +43,8 @@ public static void main(String[] args) throws IOException
     
 
     DiamondPG shape = new DiamondPG();
+    shape.setCenter(new Point(centerX, centerY));
+    shape.getTopLeft();
    
 
 
@@ -64,11 +66,10 @@ public static void main(String[] args) throws IOException
      */
 
     // ---------- You write the code here:
-    shape.setDebug(false);
-    shape.boundingRectangle.setWidth(200);
-    shape.boundingRectangle.setHeight(200);
-    shape.setboundingRectangle(p, 200, 200);
+         
+    shape.setBoundingRectangle(p, 200, 200);
     shape.setColor(Color.black);
+    shape.setDebug(true);
 
     /*
      * Prompt the user for the attributes, starting with the x and y coordinates of the center.
@@ -112,7 +113,7 @@ public static void main(String[] args) throws IOException
         color = ColorConverter.getColor(str);
         shape.setColor(Color.red);
         
-        shape.setboundingRectangle(p, width, height);
+        shape.setBoundingRectangle(p, width, height);
         shape.setColor(color);
         shape.repaint();
         

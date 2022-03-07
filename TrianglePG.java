@@ -1,6 +1,6 @@
 
 /**
- * This program is a TrianglePG program.
+ * This program is a TrianglePG program. 
  *
  * @author Sunday Jacob Nwanyim 
  *
@@ -45,10 +45,10 @@ public class TrianglePG extends PositionalGraphic
 
         if (shape == TriangleShape.UP)
         {
-            int x[] ={ super.boundingRectangle.getTopMiddle().x, super.boundingRectangle.getBottomLeft().x, super.boundingRectangle.getBottomRight().x };
+            int x[] ={ super.getTopMiddle().x, super.getBottomLeft().x, super.getBottomRight().x };
 
             // store all y points in an array for accessing
-            int y[] ={ super.boundingRectangle.getTopMiddle().y, super.boundingRectangle.getBottomLeft().y,super.boundingRectangle.getBottomRight().y };
+            int y[] ={ super.getTopMiddle().y, super.getBottomLeft().y,super.getBottomRight().y };
 
             g.drawPolygon(x, y, 3);
             g.setColor(getColor());
@@ -57,10 +57,10 @@ public class TrianglePG extends PositionalGraphic
         } 
         else
         {
-            int x[] = { super.boundingRectangle.getBottomMiddle().x, super.boundingRectangle.getTopLeft().x,super.boundingRectangle.getTopRight().x  };
+            int x[] = { super.getBottomMiddle().x, super.getTopLeft().x,super.getTopRight().x  };
 
             // store all y points in an array for accessing
-            int y[] ={ super.boundingRectangle.getBottomMiddle().y, super.boundingRectangle.getTopLeft().y,super.boundingRectangle.getTopRight().y };
+            int y[] ={ super.getBottomMiddle().y, super.getTopLeft().y,super.getTopRight().y };
 
             g.drawPolygon(x, y, 3);
             g.setColor(getColor());
